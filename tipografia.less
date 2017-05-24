@@ -1,0 +1,148 @@
+h1{
+	color: @link;
+	font-size: @tamanho / 2;
+}
+h2{
+	color: @link;
+	font-size: @tamanho / 4;
+}
+h3{
+	color: @link;
+	font-size: @tamanho / 6;
+}
+h4{
+	font-size: @tamanho2;
+}
+
+// antes
+h1::before{
+	content: " - "
+}
+
+// depois
+h1::after{
+	content: " + "
+}
+
+label:after{
+	content: ":"
+	
+}
+
+table{
+	background-color: red;
+		tr {
+			background-color: yellow;
+			td{
+				color: brown;
+			}
+		}
+}
+
+@soma : @variable1 + @variable2;
+@sub : @variable1 - @variable2;
+@mul : @variable1 * @variable2;
+@div : @variable1 / @variable2;
+
+.fundoCal {
+	background-color:red;
+	color:white;
+}
+.soma::after{
+	content: '@{soma}';
+	.fundoCal
+}
+
+.sub::after{
+	content: '@{sub}';
+	.fundoCal
+}
+
+.mul::after{
+	content: '@{mul}';
+	.fundoCal
+}
+
+.div::after{
+	content: '@{div}';
+	.fundoCal
+}
+
+
+
+@verde1 : darken(@verde, 80%);
+@verde2 : darken(@verde, 60%);
+@verde3 : darken(@verde, 40%);
+@verde4 : darken(@verde, 20%);
+
+#verde1 { background-color: @verde1}
+#verde2 { background-color: @verde2}
+#verde3 { background-color: @verde3}
+#verde4 { background-color: @verde4}
+
+.font-size(@size){
+  font-size: @size;
+}
+
+#tamanho{
+  .font-size(80px);
+}
+
+
+.tess(opaco;){
+	color: red;
+}
+
+.tess(vivo;){
+	color: blue;
+}
+
+.tess(@_){
+	color: pink;
+}
+
+@tess : opaco;
+
+h5 {
+	.tess(opaco);
+}
+
+.ancho(@width) when (@width > 100px){
+	background-color: pink;
+}
+
+.ancho2(@width) when (@width < 100px){
+	background-color: red;
+}
+
+.ancho3(@width) when (@width < 100px), (@width = 100px){
+	background-color: yellow;
+}
+
+.ancho4(@width) when (@width = 100px) and (@width < 101px){
+	background-color: brown;
+}
+
+.ancho5(@width) when (@width < 100px) and not (@width = 100px){
+	background-color: blue;
+}
+
+#teste123 {
+	.ancho(200px);
+}
+
+#teste1234 {
+	.ancho2(99px);
+}
+
+#teste12345 {
+	.ancho3(99px);
+}
+
+#teste123456 {
+	.ancho4(100px);
+}
+
+#teste1234567 {
+	.ancho5(99px);
+}

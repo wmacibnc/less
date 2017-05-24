@@ -1,0 +1,35 @@
+/*body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea ,p,blockquote,th,td {
+  margin:0;
+  padding:0;
+}
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+fieldset,img {
+  border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+  font-style:normal;
+  font-weight:normal;
+}
+ol,ul {
+  list-style:none;
+}
+caption,th {
+  text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-size:100%;
+  font-weight:normal;
+}
+q:before,q:after {
+  content:'';
+}
+abbr,acronym {
+  border:0;
+}
+
+*/
+h1{color:#00f;font-size:30px}h2{color:#00f;font-size:15px}h3{color:#00f;font-size:10px}h4{font-size:8}h1::before{content:" - "}h1::after{content:" + "}label:after{content:":"}table{background-color:red}table tr{background-color:#ff0}table tr td{color:brown}.fundoCal{background-color:red;color:#fff}.soma::after{content:'30';background-color:red;color:#fff}.sub::after{content:'-10';background-color:red;color:#fff}.mul::after{content:'200';background-color:red;color:#fff}.div::after{content:'0.5';background-color:red;color:#fff}#verde1{background-color:#000}#verde2{background-color:#000}#verde3{background-color:#030}#verde4{background-color:#090}#tamanho{font-size:80px}.tess(opaco;){color:red}.tess(vivo;){color:blue}h5{color:pink}#teste123{background-color:pink}#teste1234{background-color:red}#teste12345{background-color:#ff0}#teste123456{background-color:brown}#teste1234567{background-color:blue}body{background-color:#008000}#imagem{background-image:url("imagem/home.jpg")}
+/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
